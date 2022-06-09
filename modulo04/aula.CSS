@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    color: #f00;
+}
+H1 {
+    border: 2px solid currentColor; 
+}
+     

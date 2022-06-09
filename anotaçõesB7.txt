@@ -1,0 +1,826 @@
+﻿módulo 1 
+
+html - codigos estruturais 
+CSS - parte "decorativa"
+
+<strong> - começo (abertura de tag)
+</strong> - final (fechamento de tag) 
+
+<h1> = heading (cabeçalho)
+OBS: o heading vai do tamanho "1" ate o tamanho "6", quanto maior o número menor é o texto.
+
+Tag "<strong>" ou "bold" deixa texto em negrito.
+diferença entre "strong" e "bould (<B>)".
+
+<b> = NEGRITO = SEM SEMÂNTICA DE IMPORTÂNCIA 
+<strong> = NEGRITO = SEMÂNTICA DE IMPORTÂNCIA 
+OBS: visualmente não há nenhuma diferença entre os dois, mas a tag "strong" serve para uma pessoa com deficiência visual e que usa monitor especial dar mais importância para a palavra.
+
+Tag "<U>" deixa texto sublinhado 
+
+Tag "<i>" e "<em>" deixa o texto itálico 
+Diferença:
+<i> = itálico = SEM SEMÂNTICA DE IMPORTÂNCIA 
+<em> = itálico = SEMÂNTICA DE IMPORTÂNCIA 
+OBS: visualmente não há nenhuma diferença entre os dois, mas a tag "<em>" serve para uma pessoa com deficiência visual e que usa monitor especial dar mais importância para a palavra.
+
+
+Tag "<hr/>" uma tag que se abre e fecha nela msm, representa uma linha horizontal 
+OBS: sempre que tiver uma tag que se fecha no lado direito, significa que é uma tag unica, ou seja, que se abriu e fechou nela msm.
+
+Tag "<a>" é uma tag de link (a = âncora)
+OBS: Os atributos sempre serão inseridos na tag de abertura
+
+Tag "<img>" para adicionar imagem (<img src="htttps://.google.com.br/google.jpg"/>)
+OBS: para mudar a largura é necessario adicionar dps do "jpg", "width="VALORpx".
+OBS: para altura seria "height"
+
+ESTRUTURA BÁSICA 
+Todos os sites apartir do surgimento do html é recomendado colocar a tag "<!DOCTYPE html>" que serve para o navegador entender que a pagina que tiver essa tag, pode utilizar os recursos mais avançados do html 5.
+dps é necessario colocar a tag <html> e </html> para ajudar o navegador a entender o site e tbm é onde todo o site vai ficar 
+
+
+módulo 2
+
+Diferença entre colocar "<p>" e não colocar:
+
+Com o "<p>" a frase fica com um paragráfo.
+Olá, Seja Bem VIndo(a)!
+
+qual é o seu nome?
+
+
+Sem o "<p>" a frase fica sem o parágrafo.
+Olá, Seja Bem VIndo(a)!qual é o seu nome?
+
+
+Caso não seja possivel carregar a imagem no site, é recomendado que coloque alt="MENSAGEM",
+que tbm serve para ajudar pessoas com deficiência visual.
+
+Tag "<button>" para criar um botão 
+Tag "<br/>" para pular uma linha 
+OBS: apara pular mais de uma linha é só colocar 2 vezes o "<br/>".
+Tag "<ul>" serve para cria uma lista desordenada, e dentro dela vai a TAG "<li>" para os itens 
+OBS: para criar uma lista ordenada é necessário colocar o "<ol>".
+
+3 formas de inserção do CSS no HTML
+
+- CSS inline (<h1 style="color:red">Título da Página </h1)
+OBS: também serve para mudar a fonte da letra a largura. 
+
+- CSS interno (h1 { color:blue; }
+OBS: o CSS fica na head cabeçalho. 
+
+- CSS externo
+No externo é necessário criar outro arquivo .CSS e e adicionar ele ao código, usando "<link rel="stylesheet" href="nome do outro arquivo" />".
+Para aplicar cores e fontes diferentes em varias tags iguais é necessário criar id diferentes para cada um
+ou criando uma "class", onde não é necessário colocar palavras diferentes para cada id.
+Para colocar todos os items (id e class) com as mesmas cores e fontes basta colocar uma virgula.
+id = "#"
+class = "."
+exemplo: #titulo, .texto {
+    color:cyan;
+    font-size: 35px;
+}
+Para modificar varios itens que estão dentro de outro item ao msm tempo, não é necessário colocar a virgula. 
+exemplo: ol li {
+    color:pink;
+}
+
+todos os itens dentro de "ol" ficarão rosa.
+OBS: só ficarão rosa os "li" que estão dentro do "ol", ou sela, se tiver mais de uma lista com (uma com ol e outra com ul) somente os da lista "ol" ficará rosa.
+A tag "border" serve para colocar borda, mas dentro dela vai outros 3 elemntos.
+1- tamanho
+2- tipo de borda 
+OBS: as bordas mais utilizadas são as a "solid", "dashed" e "dotted".
+3- cor
+
+Para colocar a borda em um só lugar, é necessário colocar um "-" na frente de "border".
+bottom = parte de baixo
+top - parte de cima 
+left = parte da esquerda 
+right = parte da direita 
+
+Tag "div" cria um quadrado imaginario, que pode ser personalizado de varias formas. 
+Para criar bola "imaginaria" no site, e necessário colocar um border-radius nele, e o raio dele igual a metade do tamanho do quadrado.
+
+todo elemento que botar na tela tem pelo menos 4 propiedades, conteúdo, padding, borda e o margin.
+Padding é o espaçamento INTERNO do meu elementos.
+Margin é o espaçamento EXTERNO do meu elementos.
+Para colocar vaolores diferentes no padding, há 2 formas.
+1-
+padding-left: 10px;
+padding-top: 20px;
+
+2-
+padding:20px 0px 0px 10px.
+OBS: a segunda forma começa em cima e continua em ordem horaria, ou seja, em cima, direita, baixo, esquerda.
+também dá pra colocar só 2 números.
+Exemplo: padding:10px 50px (1opx para cima e pra baixo e 50px para esquerda e direita).
+A MESMA COISA FUNCIONA NO "MARGIN".
+É possível definir tanto a largura como a altura em pixes e porcentagem.
+OBS: definir a largura ou altura com "auto" é a mesma coisa do que definir nada.
+Há um outro tipo de "medida" que se chama inherit, que serve para usar a mesma largura/altura do item anterior.
+É possivel definir um valor minimo e um valor maximo para largura e altura. 
+"min" - mínimo 
+"max" - máximo 
+
+quando colocado o "*" no CSS o efeito sera aplicado a todos os elemntos que estão na tela 
+
+O codigo "content-box" serve para definir que o conteúdo de um elemento é definido pelo conteúdo dele, ou seja, quando coloca uma largura de 400px significa que o "400" é a largura do conteúdo, não inclue borda e o padding.
+codigo: * {
+    box-sizing: content-box;
+}  
+já o "border-box" significa que quando for definido um tamanho ele  vai incluir o padding e o border, ou seja, se for definido 400 de largura e dps põe um border de 5px, esses 10px (5 de uma lado, 5 do outro) serão removidos dos 400, o mesmo acontece com o padding.
+
+Para criar uma link para outra parte do site, como uma area de login, é necessario criar outro arquivo e ligar ele com o arquivo principal
+exemplo:  <a href="login.html">Fazer login</a>
+    </body>
+mas só vai funcinar dessa forma caso os arquivos estejam na mesma pasta, e para fazer essa "ligação" entre os arquivos em pastas diferentes, basta colocar o nome da pasta que ele esta.
+exemplo: <a href="123/login.html">Fazer login</a>
+OBS: 123 é nome da pasta.
+OBS: se o arquivo estiver em uma pasta dentro de outra pasta, basta colcoar outra "/".
+exemplo: <a href="pasta1/pasta2/login.html">Fazer login</a>
+
+O atributo "target" é usado para quando a pessoa clique no link ele abra o link em outra aba.
+codigo: target="_blank"
+
+Também é possivel adicionar um título que quando o cursor do mouse passar por cima, ficará com um título em cima.
+
+No CSS é possivel alterar a cor do link quando o cursor estiver em cima do link, assim como é possível alterar a cor do link quando vc ja visitou a pagina uma vez.
+
+É possivel formatar um texto tanto no CSS quanto no HTML.
+
+Para adicionar uma tag de comentario, basta colocar "<!--" 
+Uma tag de comentario serve para colocar alguma explicação ou um comentario mesmo, que ficará exibido internamente.
+<!-- = início
+--> = fechamento 
+
+Tag "sup" serve para deixar o texto assim: 
+ primeiro
+1
+
+
+Tag "sub" serve para deixar o texto assim:
+1
+ primeiro
+
+font-family serve para escolher a fonte do texto. 
+OBS: caso coloque uma fonte que um computador não tenha é só colocar uma virgula e colocar uma segunda vírgula.
+e se não colocar uma segunda fonte, o navegador vai colocar a fonte padrão. 
+
+ "text-align:" para alinhar o texto.
+ text-align: left = alinhado para esquerda (padrão)
+ text-align: center = alinhado no meio (centralizado)
+ text-align: right = alinhado a direita 
+ text-align: justify = o texto justificado 
+
+ OBS: quando não coloca o "text-align:" ele fica com o left (padrão)
+
+ DICA: para não ficar com aquele underline em um link é só colocar no CSS "text-decoration: none;
+ OBS: pode aplicar em qualquer tipo de texto.
+DICA: para colocar o underlien no link quando o mouse passar em cima, é só colocar no CSS 
+"a: hover {
+    text-decoration: underline;
+}"
+
+
+Para transformar um texto é só usar o "text-transform:"
+text-transform: uppercase (CapsLock)
+text-transform: lowercase (tudo miniscúlo)
+letter-spacing: = espaçamento entre uma letra e outra
+word-spacing = espaçamento entre uma letra e outra 
+
+line-height = espaço de uma linha e outra 
+text-shadow = colocar uma sombra no texto 
+
+text-shadow: 0px 2px 3px black; 
+
+0px: distancia pra direita da sombra 
+2px: quão pra baixo a sombra 
+2º 0px: quão esfumaçado, qual é o espaço esfumaçamento da cor
+
+Obs: cada letra vai ter 30px de esfumaçamento pro lado 
+
+modulo 3 (aula 3) 
+fontes extenas
+
+Para adicionar fontes externas no site, mesmo que a pessoas não tenha a fonte baixada sem seu dispositivo, é necessário colocar o link da fonte 
+exeplo:  <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+
+OBS: quando é uma fontes externa é necessário colocar aspas no comando do CSS.
+
+modulo 3 (aula4)
+listas no HTML
+
+para mudar o símbolo na list desordenada "<ul>" e necessário colocar no CSS:
+list-style-type:"
+
+tipos de figuras para a lista: 
+disc: bolinha 
+square: quadrado 
+circle: um círculo 
+none: nenhum 
+
+É possível fazer o mesmo com "<ol>"  
+código: type=""
+
+tipos:
+1: número 1,2,3,4
+A: letra A,B,C,D 
+OBS: A maiúsculo = A,B,C,D / a minúscula = a,b,c,d
+I maiúsculo: algarismo romano 
+i miniscúlo: algarismo romano só que minúsculo.
+
+
+Também é possivel alterar a ordem em que começa a lista 
+Exemplo: invés de começar por "1,2,3,4..." da pra começar por 45 "45,46,47..."
+Basta colocar o código "start".
+
+É possível criar uma lista dentro de uma lista.
+Basta colcocar um <ul> dentro de um <li>.
+<ul>
+            <li>cafe</li>
+            <li>
+                cha
+                <ul>
+                    <li>chá preto</li>
+                    <li>chá verde</li>
+                </ul>
+            </li>
+            <li>leite</li>
+
+        </ul>
+
+E também é possível criar uma lista dentro de outra lista que esta dentro de outra lista.
+código: 
+        <ul>
+            <li>cafe</li>
+            <li>
+                cha
+                <ul>
+                    <li>chá preto</li>
+                    <li>
+                        chá verde
+
+                        <lu>
+                            <li>tipo 1</li>
+                            <li>tipo 2</li>
+                        </lu>
+                        
+                    </li>
+                </ul>
+            </li>
+            <li>leite</li>
+
+        </ul>
+
+modulo 3 (aula 5)
+tabelas no HTML
+
+Tabelas são usadas de forma eclusiva para exbir dados de formas estruturada.
+
+Como fazer tabela no HTML:
+  <table width="400" border="1">
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+
+<table>: código para fazer a a tabela 
+<tr>: linha 
+<td>: coluna 
+
+para colocar um dado explicativo sobre o que é a coluna, coloca:
+ <th>
+
+
+OBS: normalmente a primeira linha é a que define quantas colunas vão ter a tabela, ou seja, oque for colocado na primeira, por regra tem que colocar na segunda. 
+
+
+DICA: na tabela é bom colcoar 2 tags 
+
+<thead> e <tbody>
+
+<thead>: está dizendo que essas linhas fazem parte no cabeçalho, e como o navegador vai entender que aquli é o cabeçalho, ele vai repetir aquele cabeçalho em todas as páginas, para ter uma tabela visualmente entenhel e ajuda na formatação do CSS.
+<tbody>: seria o corpo da tabela. 
+
+módulo 3 (aula 6)
+Tabela no CSS
+
+Primeiro é necessário desabilitar as bordas da tabela, porque qualquer alteração visual será feita no CSS.
+
+Para colocar uma borda nos conteúdos é necessário colocar a borda no "TD" e para colocar uma borda no título de cada conteúdo, basta colocar uma borda no "th".
+DICA: para colocar borda em mais de um item ao mesmo tempo (ex: td e th) é só separá-los por vírgula.
+
+Para personalizar somente o cabeçalho da tabela, coloca no CSS "thead".
+Para personalizar somente o corpo da tabela, coloca no CSS "tbody".
+
+Para colocar o efeito de passar o mouse em uma linha e todas as colunas daquela linha fiquem de determinada cor, basta colcoar:
+tr: hover {
+    background-color: #EEE;
+}
+
+
+-- Módulo 3 (aula 8) input
+
+- <input type="text"/> = campo de texto 
+
+ se adicionar ( <input type="text" name="usauario" value="Gustavo"/>) ele já ve, preenchido com o nome que eu colocoquei (value)
+
+- <input type="passoword" /> = campo para senha 
+
+- <input type="email" /> = campo para email 
+ 
+
+- <input type="radio" name="idade"/>
+ <input type="radio" name="idade"/> = campo de múltipla escolha para escolher gênero ou algo do tipo 
+
+- <input type="checkbox"/> = caixa para marcar/concordar com algo, como um termo de uso, por exemplo. 
+
+- <input type="submit" /> = botão para enviar 
+
+ OBS: é muito importante adicionar o "name" nos input.
+
+
+-- Módulo 3 (aula 9) Inputs no HTML5
+
+OBS: os inputs mencionados nessa aula só funciona em navegadores mais novos (até mesmo o "email" da aula passada)
+
+- <input type="color" /> = abre uma palheta de cores 
+
+- <input type="date" /> = abre um campo para escolher a data.
+OBS: quando for enviado, no URL vai aparecer no foromato internacional 
+
+- <input type="datetiem-locar" /> = mesma coisa do "date" porém dá pra escolher o tempo 
+
+- <input type="month" /> = somente o mês
+
+- <input type="number" /> = só é possível digitar números 
+
+- <input type="range" /> = de tanto a tanto
+
+- <input type="search" /> = variação do input text
+OBS: a única diferença é que ele arredonda um pouco mais 
+
+- <input type="tel" /> = telefone 
+
+- <input type="time" /> = somente tempo 
+
+- <input type="url" /> = aceita url 
+
+- <input type="week" /> = semana x do ano x (semana 37 de 2019)
+
+módulo 3 (aula10)
+Select
+
+Select: aquela opção de clicar e mostrar as opções disponiveis.
+OBS: o select tem que ter um name.
+
+Dentro do "select" vai colocar uma tag "option" e lá coloca as categorias.
+Exemplo: mais vendidos, mais recentes, etc...
+
+O option tem 2 versões de valores diferentes que pode ser usado, uma coisa é a que o usario ta vendo, outra coisa é o que vai ser enviado no formulário.
+Exemplo: se colocar uma atributo "value" no "option" é possivel definir um valor específico para o item.
+  
+
+  <select name="order">
+                <option valeu="bestseller">mais vendidos</option>
+                <option value="last">mais recentes</option>
+  </select>  
+
+Apesar do usuário ter selecionada a opção "Mais vendidos", não necessariamente ele enviou aquele item em específico, aquele valor, o texto "mais vendidos", ele enviou o valor que eu botei como o valor padrão dessa opção, ou seja, quando eu não específico o "value" ele vai pegar o mesmo item que está sendo exibido, é o que vai ser enviado, e quando é colocado o "value" ele vai enviar esse valor, apesar de aparecer mais vendidos ou recentes. 
+
+
+É possível pré selecionar algum item no HTML, então, quando eu não Preleciono nada, ele vai selecionar sempre o Primeiro.
+Exemplo: 
+
+ <select name="order">
+                <option valeu="bestseller">mais vendidos</option>
+                <option value="last">mais recentes</option>
+  </select>  
+
+Se eu não pré selecionar nada, o primeiro que vai aparecer é o "mais vendidos, porque ele está em primeiro no código.
+E pra eu colocar o "mais recentes" em primeiro eu vou em "options" e adiciono um atributo "selected". 
+
+<option value="bestseller">mais vendidos</option>
+<option value="last" selected>mais recentes</option>
+
+DICA: pra eu não pré selecionar nenhum item, ou seja, deixar em branco, é necessário colocar um "option" vazio em primeiro.
+Exemplo:
+ <select name="order">
+                <option></option>
+                <option valeu="bestseller">mais vendidos</option>
+                <option value="last">mais recentes</option>
+</select>
+
+É possível transforma o select me múltipla escolha. 
+Para fazer isso é necessário adicionar o atributo "Size" e "multiple" em select.
+Size: o que vai determinar quantas opções eu posso marcar.
+multiple: o que determinar que meu select seja de múltipla escolha
+
+<select name="order" size="2" multiple>
+
+Ai depois é só selecionar um item e segurar Ctrl (CONTROL) e clicar em outro.
+
+--Módulo 3 (aula 11) Textarea
+
+-<textarea> = área de texto 
+  OBS: necessário adicionar "name"
+
+-O  <textarea possuí atributos, porém não é recomendado usar, porque cada navegador pode entrepetar de forma diferente, podendo criar erros na formatação.
+  exemplo: 
+
+     <textarea name="descricao" rows="10" cols="5"></textarea>
+
+rows: linhas
+cols: colunas 
+exeplicação: cada navegador pode interpretar rows e cols (linhas e colunas) de um TAMANHO diferente.
+O ideal é que se utilize largura e altura via CSS normalmente.
+
+
+--Módulo 3 (aula 12) button 
+
+ -<button> = texto do proprio botão
+OBS: quando esse button está dentro de um formulário ele serve com um "submti"
+
+- Diferença: o <button> pode ser usado fora do formuláriopara para outras ações específicas, mas dentro do formulário ele serve como um sunmit também.
+
+
+--Módulo 3 (aula 13) Label
+
+-<label> = serve para especificar onde que coloca cada informação. 
+porém existe uma ação "especifica" para ele.
+
+<label for="nome">Nome Completo:</label><br/>
+O atributo "for" vai fazer com que, por exemplo, nos termos de uso de um site, invés de eu ter que cliar no botão de escolha (uma checkbox), eu posso simplesmente clicar na frase.
+
+Existe 2 formas de aplicar o Label: 
+
+A que foi ensinado em cima.
+
+        <label for="nome">Nome Completo:</label><br/>
+
+        <input type="text" value="Fazer Cadastro" id="nome"/>
+       
+
+E aque foi ensinado em embaixo 
+
+            <label>
+               Nome Completo:<br/>
+            <input type="text" name="nome"/>
+           </label>
+
+O input fica dentro do label
+
+
+--Módulo 3 (aula 14) Formatando formulários no CSS (1/2)
+
+-display: block; (CSS)
+Isso faz com que deixe todos os itens um embaixo do outro.
+
+-Não é interessante mexer na checkbox e no radios. 
+
+-É possivel selecionar no CSS somente um input sem class ou ID. 
+input[type="text"] {
+    padding: 10px;
+    width: 500px;
+}
+
+-Colocando seu type.
+OBS: está funcionando somente para inputs com type "text" e "password" até o momento.
+
+--Módulo 3 (aula 15) Formatando formulários no CSS (2/2)
+
+-Para tirar a borda azul que fica aparecendo no crhome é só colocar no CSS:
+outline: 0px;
+
+-DICA: 
+Para tirar o resize, fazendo que a pessoa não comsigua estragar seu layout, é só colocar no CSS
+resize: none;
+
+-DICA:
+Geralemente sites deixam os termos de serviço meio que "escondidos" e para fazer um igual é só utilizar o codigo abaixo:
+
+.termoslink {
+    color: black;
+    text-decoration: none;
+}
+.termoslink:hover {
+    text-decoration: underline;
+}
+OBS: ".termoslink" é o nome da minha CLASS onde está o link.
+
+--Módulo 3 (aula 16) Tags Fieldset e Legend
+
+-formulário que contem informações pessoais e profissionais 
+Dados pessoais: a pessoas (nome e sobrenome) 
+Dados profissionais: nome da empresa e cargo 
+
+
+Duas tags (Fieldset e Legend)
+-Fieldset = conjunto de campos  (coloca no início dos dados pessoais e  termina do fim dos dados pessoais, e repete a mesma coisa com os daods da empresa)
+-Legend = Uma legenda (coloca embaixo de Fieldset)
+
+Exemplo: 
+  <form method="POST">
+
+            <Fieldset>
+                <legend>Dados Pessoais</legend>
+                <label>
+                    Primeiro nome: <br/>
+                    <input type="text" name= "name" />
+                </label> <br/>
+
+                <label>
+                    Sobrenome: <br/>
+                    <input type="text" name= "lastname" />
+                </label> <br/>
+        </Fieldset>
+           
+        <Fieldset>
+            <legend>Dados profissionais</legend>
+            <label>
+                Nome da empresa: <br/>
+                <input type="text" name= "companyname" />
+            </label> <br/>
+
+            <label>
+                Cargo na empresa: <br/>
+                <input type="text" name= "companyjobtitle" />
+            </label> <br/>
+
+            <input type="button" value="cadastrar" /> 
+    </Fieldset>
+
+--Módulo 3 (aula 17) Validações Nativas 1
+Principais tipos de Validações Nativas 1
+
+-Required = Para tornar uma campo obrigatorio.
+Exemplo:  <label>
+                    Primeiro nome: <br/>
+                    <input type="text" name= "name" required/>
+                </label> <br/>
+
+
+-minlength="" = quantidade mínima de caracterías que o campo pode conter. 
+Exemplo:  <label>
+                    Primeiro nome: <br/>
+                    <input type="text" name= "name" required minlength="2"/>
+                </label> <br/>
+
+
+- maxlength="" = quantidade máxima de caracterías que o campo pode conter. 
+Exemplo:  <label>
+                    Primeiro nome: <br/>
+                    <input type="text" name= "name" required minlength="2" maxlength="4"/>
+                </label> <br/>
+
+
+OBS: ao colocar somente o "minlength=" no input, ele vai enviar caso não tenha nada escrito aindam porque como nõa possui o "required", o navegador entende que não é um campo obrigatório, por isso permite que seja enviador vazio.
+ 
+
+--Módulo 3 (aula 18) Validações Nativas 2
+
+-step="" = serve para pular os números de 2 em 2. 
+ Exemplo: <label>
+                idade: <br/>
+                <input type="number" name= "age" step="2"/>
+            </label> <br/>
+
+-Para ter um padrão de validação de um email é necessário colocar no campo do email um pattern.
+Exemplo: 
+<label>
+         E-mail <br/>
+         <input type="text" name= "email" pattern=""/>
+</label> <br/>
+
+OBS: Existe padrões ja prontos na internet, e tem que colocar dentro das aspas do "pattern", também é necessário colocar um título no campo. 
+
+
+--Módulo 3 (aula 19) Input type hidden
+
+-O input type hidden, serve para enviar as informações de forma escondidas.
+Exemplo:  <input type="text" name="country" value="BR"/>
+
+Quando o formulário for enviado, vai aparecer o seu país sem que precise perguntar para a pessoa. 
+
+
+--Módulo 3 (aula 20) Input type file
+
+-Geralmente arquivos são enviados no método POST.
+
+-Para emviar arquivos no formulário como uma foto, por exemplo, é necessário colocar o método POST e o type "file"
+Exemplo: 
+
+    <label>
+         Foto: <br/>
+          <input type="file" name= "photo" />
+     </label> <br/>
+
+-É possível identificar os tipos de arquivo.
+Exemplo: para que seja possível criar um filtro para imagens, é necessário colocar no campo de Fotos o accepet="image/+"
+
+Exemplo 2: 
+
+   <label>
+          Foto: <br/>
+         <input type="file" name= "photo" accept="image/+" />
+    </label> <br/>
+
+-OBS: isso não impede que a pessoa coloque outros tipos de arquvios, porém cria um filtro para para que imagens tenha uma certa "prioridade" na hora de escolher o arquivo.
+-OBS: funciona também com PDF 
+Exemplo: 
+  <label>
+        Foto: <br/>
+        <input type="file" name= "photo" accept="application/pdf" />
+    </label> <br/>
+
+-Quando eu tenho no meu formulário um "input type="file"", ou seja, quando eu estou enviando um arquivo, eu tenho que automaticamente ir no formulárioe adicionar uma propiedade, chamada "enctype".
+Exemplo:  <form method="POST" action="blablabla.php" enctype="">
+
+Quando coloca o símbolo de igual, já aparece 3 opções diferentes.
+Quando eu tenho arquivos sendo enviados, eu vou escolher a "multipart/form-data", porque o arquivo vai ser convetido em binds.
+Caso eu não adicione essa propriedade, corre o risco do servidor não receber esse arquivo.
+
+
+--Módulo 4 (aula 1) Herença
+-tudo que esta dentro do elemento, vai receber tal propriedade como herança.
+Exemplo: se eu tenho uma div com a class="container", e colocar uma cor vermelha nela, tudo que estar dentro dela vai HERDAR a cor vermelha.
+
+-Porém, são são todas as propriedades qe são herdadas.
+Exemplo: a tag border, porque ela é uma tag que não é herdada (coisas estruturais).
+
+OBS: O css funciona de cima pra baixo
+
+
+--Módulo 4 (aula 2) Especificidade
+-Quanto mais específico você for sobre o elemento que você quer aplicar aquela propriedade, ele que vai "ganhar" no CSS.
+Ou seja, o mais específico sempre ganhar.
+
+
+--Módulo 4 (aula 3) Cascata
+-A ordem de prioridade do CSS funciona assim:
+1- é lido o arquivo 
+2- depois o style (pode substituir qualquer coisa que tenha no arquivo)
+3- depois o inline (pode substituir qualquer coisa que tenha no style e no arquivo)
+
+--Módulo 4 (aula 4) Unidades de medida absoluta
+
+-medidas absolutas são medidas que não vão sofrer alterações por outros elementos do site
+-Existe algumas unidades de medidas que a são consideradas absolutas (o pixel é uma delas).
+
+-pt = unidade de medida absoluta, porém é utilizada mais nas fontes.
+-in (polegadas) = também é considerada medida absoluta 
+-cm e mm = é mais utilizado para imprimir 
+
+
+--Módulo 4 (aula 5) Unidades de medida relativas (fonte) 1
+
+-As unidades de medida que ela vão mudar de tamanho baseado nos elementos que tem na própria página.
+
+-em = é baseado no font-size no item pai do elemento que estou botando botando.
+Exemplo:
+(HTML)
+
+  <div class="box">
+            <div class="box-interno ">
+                Esta é uma frase 
+            </div>
+        </div>
+
+
+(CSS) 
+.box {
+    font-size: 20px;
+
+}
+.box-interno {
+    background-color: #999;
+    width: 10em;
+    height: 10em;
+}
+
+Percebe-se que o "box" é meio que o "pai" da box-interno, e no CSS a font-size do box é de 20px, então se eu for colocar a unidade de medida "em" na box-interno, "1em" vai ser igual a "20px", "2em" vai ser igual a "40px", "3em" vai ser igual a "60px", assim por diante...
+
+-Rem = É como se fosse um "em" porém ele corresponde ao primeiro elemento da tela, ou seja, se eu coloco no "html" um font-size de 10px, e no h1 coloco "2rem" o meu h1 vai ter 20px.
+
+-OBS: quando eu não especifico o font-size, por padrão (na maioria dos navegadores) vai ser 16px.
+
+
+--Módulo 4 (aula 6) Unidades de medida relativas (fonte) 2
+
+Quando coloca 50% no box, significa que ele vai pegar 50% do ESPAÇO DISPONIVEL.
+OBS: uma div vai responde baseado no tamanho de cima dela.
+
+
+ex (3-5 minutos)
+ex: é um tipo de medida baseada no tipo de fonte que vc ta usando, ou seja, o tamanho dela vai ser o tamanho da altura da letra x na fonte que esta sendo aplicada naquele momento.
+exemplo: ele vai pegar a letra x mesmo, vai medir a altura dela e vai definir essa altura como o tamanho da letra.
+
+ch (6-final)
+A ch é usada muito quando tem um box onde possui uma frase.
+ch: todas as caracterias tem o mesmo espaço de largura, porém só funciona com fontes mono space.
+
+
+--Módulo 4 (aula 7) Unidades de medida relativas (viewport)
+
+vh (1 - 3:35 minutos)
+Exemplo de vh: height: 100vh;
+Oque significa: é 100% da altura disponivel para o usuário.
+OBS: é muito usada para fazer um menu lateral por exemplo.
+
+
+vw (3:35 - 5:55 minutos) 
+"vw" vai ser 100% da LARGURA quue esta disponivel na tela.
+Obs: 100 significa 100%, igualmente como 50 sigifica 50%, 1 significa 1%, etc...
+IMPORTANTE: Pode variar muito conforme o tamanho da tela
+IMPORTANTE: não é usado muito pra fonte, mas sim para posicionar estruturas gerais do site. 
+
+
+vmin e vmax (6 - final)
+vmin: ele vai identificar entre a altura e a largura quem é o menor pra usar como referência.
+Obs: no caso do computador, na maioria das vezes o menor é a altura
+
+vmax: o inverso do vmin 
+
+
+--Módulo 4 (aula 8) O inherit  
+
+inherit ele vai herder a força/propriedade do item a cima, ou seja, forçar uma herança.
+Obs: é muito pouco utilizada.
+
+SITUAÇÃO PARA EXEMPLO: 
+Quero que o meu h1 dentro do box fique do mesmo tamanho original do meu box.
+
+resoluçaõ (1): CSS
+
+.box h1 {
+    font-size: 15px;
+}
+
+
+ou
+
+
+resoluçaõ (2): forçar uma herança 
+
+.box h1 {
+    font-size: inherit;
+}
+
+
+
+--Módulo 4 (aula 9) Tipos de valores para cores
+É possivel identificar uma cor de varias formas
+
+hexadecimal (2 - 5:30 minutos)
+Geralmente essas cores são representadas por um código de 6 caracteres hexadecimais (de 0 a F) precedido do caracter "#", por exemplo: '#68B46D'. 
+
+Os 2 primeiros são correspondentes as tonalidades de vermelho
+O 3 e 4 são correspondentes as tonalidade do verde 
+O 5 e 6 são correspondentes as tonalidade do azul
+
+0 Corresponde a NADA daquela tonalidade e F corresponde a TUDO daquela tonalidade
+
+
+RGB (5:30 - 7 minutos)
+Para definir o código RGB de uma cor vc coloca "rgb()" dentro do parênteses vc coloca números separados por vígura que podem ir de 0 ate 255.
+
+
+HSL(7 - 7:50 minutos)
+Mesmo procedimento do RGB, porém vai ser usado porcentagem.
+
+
+Há também uma forma de vc definir uma cor baseado na cor de cima.
+SITUAÇÃO: quero que o meu h1 fique com a borda da mesma cor que o item de cima.
+RESOLUÇÃO: 
+
+body {
+    margin: 0;
+    color: #f00;
+}
+H1 {
+    border: 2px solid currentColor; 
+}
+     
+EXPLICAÇÃO: em vez de colocar o nome da cor, pode simplesmente colocar currentColor, e isso gera um efeito de cascata.
+
+
+
+--Módulo 5 (aula 2) Layout adaptativo vs layout responsivo
+
+Layout não responsivel: é o Layout que não se adapta ao tamanho da tela.
+
+Layout responsivel: é um Layout pensado para ir diminuindo de tamanho de acordo com o tamanho da própria tela.
+
+Layout adaptativo: é um Layout que se adpeta ao tamanho da tela específico, porém ele não se adapta de forma fluida como o responsivel, ou seja, ele se renderiza de forma diferente dependendo do tamanho da tela.
+
+OBS: na maioria dos sites vai ter que fazer um adeptativo, junto com um responsivel.
+
+
+
+--Módulo 5 (aula 3) Viewport
+
+O viewport é a área onde seu website aparece. É a área branca da janela quando você abre o browser. 
+O viewport sempre vai ter o tamanho da janela. Mas a forma como os elementos são renderizados vai depender bastante do dispositivo.

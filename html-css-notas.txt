@@ -1,0 +1,76 @@
+módulo 1 
+
+html - codigos estruturais 
+CSS - parte "desvcorativa"
+
+<strong> - começo (abertura de tag)
+</strong> - final (fechamento de tag) 
+
+<h1> = heading (cabeçalho)
+OBS: o heading vai do tamanho "1" ate o tamanho "6", quanto maior o número menor é o texto.
+
+Tag "<strong>" deixa texto em negrito ou "bold" para CSS
+Tag "<U>" deixa texto sublinhado 
+
+Tag "<hr/>" uma tag que se abre e fecha nela msm, representa uma linha horizontal 
+OBS: sempre que tiver uma tag que se fecha no lado direito, significa que é uma tag unica, ou seja, que se abriu e fechou nela msm.
+
+Tag "<a>" é uma tag de link (a = âncora)
+OBS: Os atributos sempre serão inseridos na tag de abertura
+
+Tag "<img>" para adicionar imagem (<img src="htttps://.google.com.br/google.jpg"/>)
+OBS: para mudar a largura é necessario adicionar dps do "jpg", "width="VALORpx".
+OBS: para altura seria "height"
+
+ESTRUTURA BÁSICA 
+Todos os sites apartir do surgimento do html é recomendado colocar a tag "<!DOCTYPE html>" que serve para o navegador entender que a pagina que tiver essa tag, pode utilizar os recursos mais avançados do html 5.
+dps é necessario colocar a tag <html> e </html> para ajudar o navegador a entender o site e tbm é onde todo o site vai ficar 
+
+
+módulo 2
+
+Diferença entre colocar "<p>" e não colocar:
+
+Com o "<p>" a frase fica com um paragráfo.
+Olá, Seja Bem VIndo(a)!
+
+qual é o seu nome?
+
+
+Sem o "<p>" a frase fica sem o parágrafo.
+Olá, Seja Bem VIndo(a)!qual é o seu nome?
+
+
+Caso não seja possivel carregar a imagem no site, é recomendado que coloque alt="MENSAGEM",
+que tbm serve para ajudar pessoas com deficiência visual.
+
+Tag "<button>" para criar um botão 
+Tag "<br/>" para pular uma linha 
+OBS: apara pular mais de uma linha é só colocar 2 vezes o "<br/>".
+Tag "<ul>" serve para cria uma lista desordenada, e dentro dela vai a TAG "<li>" para os itens 
+OBS: para criar uma lista ordenada é necessário colocar o "<ol>".
+
+3 formas de inserção do CSS no HTML
+
+- CSS inline (<h1 style="color:red">Título da Página </h1)
+OBS: também serve para mudar a fonte da letra a largura. 
+
+- CSS interno (h1 { color:blue; }
+OBS: o CSS fica na head cabeçalho. 
+
+- CSS externo
+No externo é necessário criar outro arquivo .CSS e e adicionar ele ao código, usando "<link rel="stylesheet" href="nome do outro arquivo" />".
+Para aplicar cores e fontes diferentes em varias tags iguais é necessário criar id diferentes para cada um
+ou criando uma "class", onde não é necessário colocar palavras diferentes para cada id.
+Para colocar todos os items (id e class) com as mesmas cores e fontes basta colocar uma virgula.
+exemplo: #titulo, .texto {
+    color:cyan;
+    font-size: 35px;
+}
+Para modificar varios itens que estão dentro de outro item ao msm tempo, não é necessário colocar a virgula. 
+exemplo: ol li {
+    color:pink;
+}
+
+todos os itens dentro de "ol" ficarão rosa.
+OBS: só ficarão rosa os "li" que estão dentro do "ol", ou sela, se tiver mais de uma lista com (uma com ol e outra com ul) somente os da lista "ol" ficará rosa

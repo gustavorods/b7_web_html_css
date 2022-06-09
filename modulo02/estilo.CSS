@@ -1,0 +1,36 @@
+* {
+    box-sizing: content-box;
+}
+body {
+    margin: 50px;
+    font-size: 20px;
+}
+h1 {
+    font-family: Shizuru;
+
+}
+
+table {
+    width:600pox;
+    border:1px solid black;
+}
+thead {
+    background-color: gray;
+
+}
+th, td {
+    padding:10px;
+    text-align: left;
+}
+tbody tr:hover {
+    background-color: #EEE;
+}
+tbody td {
+        border-bottom: 1px solid gray; 
+}
+tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
+th {
+    font-weight: normal;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+        <meta :charset="UTF-8" />
+        <tittle>teste de base</tittle>
+        <link rel="stylesheet" href="estilo15-.CSS"/>
+     </head>
+
+     <body>
+        <form method="POST" action="blablabla.php" enctype="multipart/form-data">
+            <input type="text" name="country" value="BR"/>
+            <Fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label>
+                    Primeiro nome: <br/>
+                    <input type="text" name= "name" required/>
+                </label> <br/>
+
+                <label>
+                    Sobrenome: <br/>
+                    <input type="text" name= "lastname" />
+                </label> <br/>
+
+                <label>
+                    Foto: <br/>
+                    <input type="file" name= "photo" accept="application/pdf" />
+                </label> <br/>
+
+            </Fieldset>
+
+        
+        <Fieldset>
+            <legend>Dados profissionais</legend>
+
+            <label>
+                Nome da empresa: <br/>
+                <input type="text" name= "companyname" />
+            </label> <br/>
+
+            <label>
+                Cargo na empresa: <br/>
+                <input type="text" name= "companyjobtitle" />
+            </label> <br/>
+        </Fieldset>
+
+        <input type="button" value="cadastrar" /> 
+
+        </form>
+     </body>
+ </html>
